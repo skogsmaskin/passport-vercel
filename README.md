@@ -1,11 +1,11 @@
 # passport-zeit
 [Passport](http://passportjs.org/) strategy for authenticating with
-[Zeit](https://www.zeit.co/) using the OAuth 2.0 API.
+[ZEIT](https://www.zeit.co/) using the OAuth 2.0 API.
  
 [![Build Status](https://travis-ci.com/skogsmaskin/passport-zeit.svg?branch=master)](https://travis-ci.com/skogsmaskin/passport-zeit)
 
-This module lets you authenticate with Zeit in your Node.js applications.
-By plugging into Passport, Zeit authentication can be easily and
+This module lets you authenticate with ZEIT in your Node.js applications.
+By plugging into Passport, ZEIT authentication can be easily and
 unobtrusively integrated into any application or framework that supports
 [Connect](http://www.senchalabs.org/connect/)-style middleware, including
 [Express](http://expressjs.com/).
@@ -21,12 +21,12 @@ $ npm install passport-zeit
 
 #### Create an Application
 
-Before using `passport-zeit`, you must register an application with Zeit.
-At the time being this is a manual process where you will have to contact Zeit and get them to do it for you. Your application will be issued a client ID and client secret, which need to be provided to the strategy. You will also need to configure a callback URL which matches the route in your application.
+Before using `passport-zeit`, you must register an application with ZEIT.
+At the time being this is a manual process where you will have to contact ZEIT and get them to do it for you. Your application will be issued a client ID and client secret, which need to be provided to the strategy. You will also need to configure a callback URL which matches the route in your application.
 
 #### Configure Strategy
 
-The Zeit authentication strategy authenticates users using a Zeit account
+The ZEIT authentication strategy authenticates users using a ZEIT account
 and OAuth 2.0 tokens. The client ID and secret obtained when creating an
 application are supplied as options when creating the strategy. The strategy
 also requires a `verify` callback, which receives the access token, as well as 
@@ -50,7 +50,7 @@ passport.use(new ZeitStrategy({
 ))
 ```
 
-*Note: While Zeit doesn't support refresh tokens (as for Jan. 2019),
+*Note: While ZEIT doesn't support refresh tokens (as for Jan. 2019),
 the verify callback still uses a second parameter `refreshToken` to conform
 to the OAuth2 standard. This makes it easier to  share a verify callback function
 for all `passport-oauth2` based authentications you use with Passport.js.
