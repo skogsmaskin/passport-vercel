@@ -1,5 +1,5 @@
 {
-  "name": "passport-zeit",
+  "name": "passport-vercel",
   "version": "0.0.1",
   "description": "",
   "keywords": [
@@ -7,25 +7,26 @@
     "authentication",
     "identity",
     "zeit",
+    "vercel",
     "now",
     "passport-strategy",
     "passport",
     "strategy"
   ],
   "bugs": {
-    "url": "http://github.com/skogsmaskin/passport-zeit/issues"
+    "url": "http://github.com/skogsmaskin/passport-vercel/issues"
   },
-  "main": "dist/passport-zeit.umd.js",
-  "module": "dist/passport-zeit.es5.js",
-  "typings": "dist/types/passport-zeit.d.ts",
+  "main": "dist/passport-vercel.umd.js",
+  "module": "dist/passport-vercel.es5.js",
+  "typings": "dist/types/passport-vercel.d.ts",
   "files": [
     "dist"
   ],
   "author": "Per-Kristian Nordnes <per.kristian.nordnes@gmail.com>",
-  "homepage": "https://github.com/skogsmaskin/passport-zeit#readme",
+  "homepage": "https://github.com/skogsmaskin/passport-vercel#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/github.com/skogsmaskin/passport-zeit"
+    "url": "git://github.com/github.com/skogsmaskin/passport-vercel"
   },
   "license": "MIT",
   "licenses": [

@@ -1,4 +1,4 @@
-import Strategy from '../src/passport-zeit'
+import Strategy from '../src/passport-vercel'
 import { Profile } from '../src/profile'
 
 const strategy = new Strategy(
@@ -23,15 +23,13 @@ describe('Strategy', () => {
 
   it('parses profile info', () => {
     let theProfile
-    const done = jest.fn().mockImplementationOnce(
-      (err: Error | null, profile?: Profile): void => {
-        if (err) {
-          return done(err)
-        }
-        theProfile = profile
-        done(null, profile)
+    const done = jest.fn().mockImplementationOnce((err: Error | null, profile?: Profile): void => {
+      if (err) {
+        return done(err)
       }
-    )
+      theProfile = profile
+      done(null, profile)
+    })
     strategy.userProfile('jibberishAccessToken', done)
     expect(theProfile).toEqual({
       _json: {
@@ -61,9 +59,11 @@ describe('Strategy', () => {
       emails: [{ value: 'test@test.com' }],
       id: 'xxxx',
       photos: [
-        { value: 'https://zeit.co/api/www/avatar/92083b1b1217eb77bf18ff4a58c5a32c672e112b?&s=600' }
+        {
+          value: 'https://vercel.com/api/www/avatar/92083b1b1217eb77bf18ff4a58c5a32c672e112b?s=600'
+        }
       ],
-      provider: 'zeit',
+      provider: 'vercel',
       username: 'testperson'
     })
   })
