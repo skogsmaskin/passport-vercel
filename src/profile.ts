@@ -1,10 +1,10 @@
 interface UserInfoRaw {
   user: {
-    uid: string,
-    email: string,
-    name: string,
-    username: string,
-    avatar: string,
+    uid: string
+    email: string
+    name: string
+    username: string
+    avatar: string
   }
 }
 
@@ -28,7 +28,7 @@ export function parseUserProfile(userInfo: UserInfoRaw) {
     profile.emails = [{ value: userInfo.user.email }]
   }
   if (userInfo.user.avatar) {
-    profile.photos = [{ value: `https://zeit.co/api/www/avatar/${userInfo.user.avatar}?&s=600` }]
+    profile.photos = [{ value: `https://vercel.com/api/www/avatar/${userInfo.user.avatar}?s=600` }]
   }
   return profile
 }

@@ -7,7 +7,7 @@ import json from 'rollup-plugin-json'
 
 const pkg = require('./package.json')
 
-const libraryName = 'passport-zeit'
+const libraryName = 'passport-vercel'
 
 export default {
   input: `src/${libraryName}.ts`,

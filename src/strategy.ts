@@ -3,11 +3,11 @@ import OAuth2Strategy, { InternalOAuthError, VerifyFunction } from 'passport-oau
 import { parseUserProfile } from './profile'
 import APIError from './apiError'
 
-const STRATEGY_NAME = 'zeit'
-const PROVIDER_NAME = 'zeit'
-const USER_PROFILE_URL = 'https://api.zeit.co/www/user'
-const AUTHORIZATION_URL = 'https://zeit.co/oauth/authorize'
-const TOKEN_URL = 'https://api.zeit.co/v2/oauth/access_token'
+const STRATEGY_NAME = 'vercel'
+const PROVIDER_NAME = 'vercel'
+const USER_PROFILE_URL = 'https://api.vercel.com/www/user'
+const AUTHORIZATION_URL = 'https://vercel.com/oauth/authorize'
+const TOKEN_URL = 'https://vercel.com/v2/oauth/access_token'
 
 interface StrategyOptions {
   clientID: string
